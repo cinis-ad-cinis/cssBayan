@@ -192,6 +192,10 @@ img {
   .main__title {
     margin-bottom: 2.8rem;
     font-size: 3.6rem;
+    background: linear-gradient(272.54deg, #bb334e 40.26%, #8f2491 70.96%, #6424fb 87.94%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .accordion__list {
@@ -218,5 +222,46 @@ img {
 
   .footer p {
     font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .header {
+    padding: 3rem 0;
+  }
+
+  .header p {
+    font-size: 2.4rem;
+  }
+
+  .main__title {
+    margin-bottom: 3rem;
+    font-size: 4.8rem;
+  }
+
+  .accordion__list {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .accordion__title {
+    padding: 2rem 0;
+    font-size: 2.4rem;
+  }
+
+  .accordion__title svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .accordion__image {
+    max-width: 50rem;
+  }
+
+  .footer {
+    padding: 2.2rem 0;
+  }
+
+  .footer p {
+    font-size: 2rem;
   }
 }
