@@ -116,7 +116,7 @@ img {
 
 .accordion__title svg {
   margin-left: auto;
-  transition: opacity, transform 0.3 ease;
+  transition: opacity 0.5s ease, transform 0.3s ease;
 }
 
 .break {
