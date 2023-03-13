@@ -1,0 +1,267 @@
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("assets/fonts/montserrat-regular.woff2") format("woff2"),
+    url("assets/fonts/montserrat-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("assets/fonts/montserrat-semibold.woff2") format("woff2"),
+    url("assets/fonts/montserrat-semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("assets/fonts/montserrat-bold.woff2") format("woff2"),
+    url("assets/fonts/montserrat-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%
+}
+
+img {
+  display: block;
+  object-fit: contain;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.header p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.main__title {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  background: linear-gradient(272.54deg, #bb334e 23.26%, #8f2491 58.96%, #6424fb 86.94%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.accordion {
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.accordion__list {
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  list-style-type: none;
+  box-shadow: 0.2rem 0.4rem 1rem rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+}
+
+.accordion__item {
+  border-bottom: 0.1rem solid #6424fb;
+  cursor: pointer;
+}
+
+.accordion__item:last-child {
+  border-bottom: none;
+}
+
+.accordion__input {
+  display: none;
+}
+
+.accordion__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6424fb;
+  cursor: pointer;
+}
+
+.accordion__title svg {
+  margin-left: auto;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.accordion__input:checked ~ .accordion__title svg {
+  transform: rotate(180deg);
+}
+
+.accordion__input:checked ~ .accordion__title span {
+  color: #2e0789;
+}
+
+.accordion__input:checked ~ .accordion__title img {
+  height: auto;
+  margin: 1.6rem auto;
+  opacity: 1;
+}
+
+.accordion__title:active {
+  opacity: 0.7;
+}
+
+.accordion__input:active ~ .accordion__title span {
+  color: #6424fb !important;
+}
+
+.accordion__image {
+  width: 80%;
+  max-width: 25rem;
+  height: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.footer {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+@media (hover: hover) {
+  .accordion__list:hover > .accordion__item span {
+    color: #2e0789;
+  }
+
+  .accordion__list:not(:hover) > .accordion__item svg {
+    opacity: 0;
+  }
+
+  .accordion__input:hover ~ .accordion__title svg  {
+    transform: rotate(180deg);
+  }
+
+  .accordion__item:hover > .accordion__title img {
+    height: auto;
+    margin: 1.6rem auto;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 820px) {
+  .header p {
+    font-size: 1.7rem;
+  }
+
+  .main__title {
+    margin-bottom: 2.8rem;
+    font-size: 3.6rem;
+    background: linear-gradient(272.54deg, #bb334e 40.26%, #8f2491 70.96%, #6424fb 87.94%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .accordion__list {
+    padding: 1rem 2rem;
+  }
+
+  .accordion__title {
+    padding: 1.6rem 0;
+    font-size: 1.8rem;
+  }
+
+  .accordion__title svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .accordion__image {
+    max-width: 40rem;
+  }
+
+  .footer {
+    padding: 2rem 0;
+  }
+
+  .footer p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .header {
+    padding: 3rem 0;
+  }
+
+  .header p {
+    font-size: 2.4rem;
+  }
+
+  .main__title {
+    margin-bottom: 3rem;
+    font-size: 4.8rem;
+  }
+
+  .accordion__list {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .accordion__title {
+    padding: 2rem 0;
+    font-size: 2.4rem;
+  }
+
+  .accordion__title svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .accordion__image {
+    max-width: 50rem;
+  }
+
+  .footer {
+    padding: 2.2rem 0;
+  }
+
+  .footer p {
+    font-size: 2rem;
+  }
+}
